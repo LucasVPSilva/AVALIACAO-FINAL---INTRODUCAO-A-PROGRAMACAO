@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AGENDA PONT F1 - SEU AGREGADOR DE RECADOS DA FORMULA 1</title>
+  <link rel="stylesheet" href="./css/style-new.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <img src="./img/Prancheta 36.png" alt="logo" />
+      <nav class="header_links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container_main">
+      <form action="" class="formularioCadastro" id="formularioCadastro" onsubmit="cadastrarUsuario(event)">
+        <fieldset>
+          <legend><strong>Cadastro Novo Usuário:</strong></legend>
+          <br>
+          <label for="nomeCompleto">Nome Completo:</label>
+          <input type="text" id="nomeCompleto" name="nomeCompleto" placeholder="Seu Nome" required>
+          <br>
+          <br>
+          <label for="dataNascimento">Data de Nascimento:</label>
+          <input type="date" name="dataNascimento" id="dataNascimento">
+          <br><br>
+          <label for="emailCompleto">Digite seu e-mail para <i>login</i>:</label>
+          <input type="email" name="emailCompleto" id="emailCompleto" placeholder="Ex.: email@email.com" required>
+          <br><br>
+          <label for="senhaLogin">Digite sua senha para <i>login</i>:</label>
+          <input type="password" name="senhaLogin" id="senhaLogin" required>
+          <br><br>
+          <label for="equipeTorcida">Qual sua equipe favorita? </label>
+          <select name="equipeTorcida" id="equipeTorcida">
+            <option value="" disabled selected>Selecione</option>
+            <option value="">Red Bull Racing</option>
+            <option value="">Scuderia Ferrari</option>
+            <option value="">Mercedes AMG</option>
+            <option value="">Alpine F1</option>
+            <option value="">McLaren F1</option>
+            <option value="">Alfa Romeo</option>
+            <option value="">Aston Martin</option>
+            <option value="">Haas F1</option>
+            <option value="">Scuderia AlphaTauri</option>
+            <option value="">Williams Racing</option>
+          </select>
+          <br><br>
+        </fieldset>
+        <br>
+        <br>
+        <button type="submit" class="buttonCadastro">Cadastrar Usuário</button>
+
+      </form>
+
+    </div>
+  </main>
+  <footer>
+    <div class="container-footer">
+      <p>Copyright Point F1 - Trabalho para Growdev</p>
+    </div>
+  </footer>
+
+  <script src="./js/novousuario.js"></script>
+</body>
+
+</html>

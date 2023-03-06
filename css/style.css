@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+
+header .container {
+  background-color: #161d26;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+header img {
+  width: 100px;
+}
+
+.header_links ul {
+  display: flex;
+  list-style-type: none;
+}
+
+header h1 {
+  color: #d9d9d9;
+  margin: 0px 0px 0px 20px;
+}
+
+li a {
+  text-decoration: none;
+  margin: 0px 20px 0px 0px;
+  color: #f5f2f2;
+  font-size: 1.5em;
+}
+
+/* COPRO */
+
+.container_main {
+  height: 700px;
+  background: url(../img/background2.jpg) no-repeat;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.img_radio {
+  width: 350px;
+  height: 350px;
+  margin-left: 200px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px 2px black;
+}
+
+.box_login {
+  border-radius: 10px;
+  margin-right: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* BUTTONS DE LOGIN E SENHA */
+
+.login-box {
+
+  width: 450px;
+  height: 380px;
+  padding: 40px;
+  background:#2AB4A5;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
+
+.login-box p:first-child {
+  margin: 0 0 30px;
+  padding: 0;
+  color: black;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: black;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  background: transparent;
+}
+
+.login-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: black;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: black;
+  font-size: 12px;
+}
+
+.login-box form button {
+  width: 200px;
+  display: flex;
+  color: black;
+  border: 2px solid black;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: .5s;
+  margin: 0px auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  letter-spacing: 3px ;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#textButton {
+  text-align: center;
+  font-size: 16px;
+
+  
+}
+
+.login-box button:hover {
+  background: red;
+  color: white;
+  border-radius: 5px;
+}
+
+#textButton:hover {
+  background: red;
+  color: white;
+  border-radius: 5px;
+  transition: .5s;
+}
+
+.login-box button span {
+  position: absolute;
+  /* display: block; */
+}
+
+
+.login-box p:last-child {
+  color: #333333;
+  font-size: 14px;
+ display: flex;
+  margin: 0 auto;
+  justify-content: center;
+
+}
+
+.login-box a.a2 {
+  color: white;
+  text-decoration: none;
+  margin-left: 05px;
+}
+
+.login-box a.a2:hover {
+  background: transparent;
+  color: red;
+  border-radius: 5px;
+  transition: 0.5s;
+
+}
+
+/* RODAPÉ */
+
+.container-footer {
+  height: 50px;
+  background-color: #161d26;
+  color: white;
+
+}
+
+.container-footer p{
+  padding-top: 10px;
+  text-align: center;
+}

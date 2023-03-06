@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AGENDA PONT F1 - SEU AGREGADOR DE RECADOS DA FORMULA 1</title>
+  <link rel="stylesheet" href="css/styleanot.css" />
+
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <img src="./img/Prancheta 36.png" alt="logo" />
+      <nav class="header_links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+
+
+
+    <div class="container_main">
+
+      <div class="anotacoes">
+        <form id="formAnotacoes" onsubmit="cadastrarAnotacoes(event)">
+          <table class="tabelaAnotacoes">
+            <div class="meuRecado">
+              <h2>Adicionar nova anotação</h2>
+            </div>
+            <tr>
+              <td>
+                <label for="data"></label>
+                <input type="date" name="dataInf" id="dataInf">
+              </td>
+              <td>
+                <label for="corrida"></label>
+                <input type="text" name="corrida" id="corrida" placeholder="Informe o GP">
+              </td>
+              <td>
+                <label for="piloto"></label>
+                <select type="text" name="piloto" id="piloto" placeholder="Informe o Piloto">
+                  <option value="" disabled selected>Selecione o Piloto</option>
+                  <option value="Verstappen">Max Verstappen</option>
+                  <option value="Perez">Sergio Perez</option>
+                  <option value="Leclerc">Charles Leclerc</option>
+                  <option value="Sainz">Carlos Sainz</option>
+                  <option value="Hamilton">Lewis Hamilton</option>
+                  <option value="Russell">George Russell</option>
+                  <option value="Alonso">Fernando Alonso</option>
+                  <option value="Stroll">Lance Stroll</option>
+                  <option value="Gasly">Pierre Gasly</option>
+                  <option value="Ocon">Esteban Ocon</option>
+                  <option value="Norris">Lando Norris</option>
+                  <option value="Piastri">Oscar Piastri</option>
+                  <option value="Bottos">Valtteri Bottas</option>
+                  <option value="Zhou">Guanyu Zhou</option>
+                  <option value="Tsunoda">Yuki Tsunoda</option>
+                  <option value="Vries">Nyck De Vries</option>
+                  <option value="Magnussen">Kevin Magnussen</option>
+                  <option value="Hulkenberg">Nico Hulkenberg</option>
+                  <option value="Albon">Alex Albon</option>
+                  <option value="Sargeant">Logan Sargeant</option>
+                </select>
+              </td>
+              <td>
+                <label for="posicaoChegada"></label>
+                <input type="text" name="posicaoChegada" id="posicaoChegada" placeholder="Informe a posição de chegada">
+              </td>
+              <td>
+                <label for="pontuacaoPiloto"></label>
+                <input type="number" name="pontuacaoPiloto" id="pontuacaoPiloto" placeholder="Informe a pontuação no GP">
+              </td>
+              <td>
+                <label for="observacoesDaCorrida"></label>
+                <textarea name="observacoesDaCorrida" id="observacoesDaCorrida" cols="30" rows="03" placeholder="Anote suas considerações da corrida"></textarea>
+              </td>
+              <td>
+                <button type="submit" id="botaoSubmit">Salvar Anotação</button>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+
+      <div id="ContainerTabela">
+        <table id="tabela">
+          <thead>
+            <tr id="cabecalho">
+              <th>Data</th>
+              <th>Grande Prêmio</th>
+              <th>Piloto</th>
+              <th>Posição de Chegada</th>
+              <th>Pontuação</th>
+              <th>Observações</th>
+              <th>Ação</th>
+            </tr>
+          </thead>
+          <tbody id="tBody">
+
+          </tbody>
+        </table>
+      </div>
+
+      <!-- <table class="table">
+        <tr>
+          <th>Data</th>
+          <th>Grande Prêmio</th>
+          <th>Piloto</th>
+          <th>Posição de Chegada</th>
+          <th>Pontuação</th>
+          <th>Observações</th>
+          <th>Ação</th>
+
+
+        </tr>
+
+        <tbody id="tBody">
+
+
+
+
+        </tbody>
+      </table> -->
+
+    </div>
+
+
+
+
+
+
+
+    <footer>
+      <div class="container-footer">
+        <p>Copyright Point F1 - Trabalho para Growdev</p>
+      </div>
+    </footer>
+
+    <script src="js/anotacoes.js"></script>
+</body>
+
+</html>

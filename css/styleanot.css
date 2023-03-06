@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+  
+
+header .container {
+  background-color: #161d26;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+header img {
+  width: 100px;
+}
+
+.header_links ul {
+  display: flex;
+  list-style-type: none;
+}
+
+header h1 {
+  color: #d9d9d9;
+  margin: 0px 0px 0px 20px;
+}
+
+li a {
+  text-decoration: none;
+  margin: 0px 20px 0px 0px;
+  color: #f5f2f2;
+  font-size: 1.5em;
+}
+
+  
+  /* COPRO */
+  
+ .container_main {
+    height: 700px;
+    background: url(../img/background2.jpg) no-repeat;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+
+/* TABELA */
+
+
+.tabelaAnotacoes {
+  background-color: white;
+  font-family: arial, sans-serif;
+  border-radius: 05px;
+  margin-bottom: 50px;
+  border-collapse: collapse;
+}
+
+.meuRecado {
+  text-align: center;
+  border: 1px solid black;
+  margin-top: 20px;
+  padding: 05px;
+  background-color: white;
+  border-radius: 05px;
+  text-transform: uppercase;
+}
+
+
+
+  #tabela {
+    border:1px solid #b3adad;
+    border-collapse:collapse;
+    padding:5px;
+    width: 1200px;
+  }
+  #cabecalho{
+    border:1px solid #b3adad;
+    padding:5px;
+    background: #f0f0f0;
+    color: #313030;
+  }
+  tr, td, th {
+    border:1px solid #b3adad;
+    text-align:center;
+    padding:5px;
+    background: #ffffff;
+    color: #313030;
+    padding: 8px;
+    text-align: center;
+    border-radius: 2px;
+    font-size: 20px;
+  }
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  /* RODAPÉ */
+  
+  .container-footer {
+    height: 50px;
+    background-color: #161d26;
+    color: white;
+  
+  }
+  
+  .container-footer p{
+    padding-top: 10px;
+    text-align: center;
+  }

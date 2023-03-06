@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AGENDA PONT F1 - SEU AGREGADOR DE RECADOS DA FORMULA 1</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <img src="./img/Prancheta 36.png" alt="logo" />
+      <nav class="header_links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container_main">
+      <div>
+        <img src="img/radiof1.jpg" alt="" class="img_radio" />
+      </div>
+      <div class="box_login">
+
+
+        <div class="login-box">
+          <p>Login</p>
+          <form id="loginUsuario" onsubmit="loginUsuario(event)">
+            <div class="user-box">
+              <input required name="emailInput" type="text" id="emailInput">
+              <label for="emailInput">Email</label>
+            </div>
+            <div class="user-box">
+              <input required name="passwordInput" type="password" id="passwordInput">
+              <label for="passwordInput">Password</label>
+            </div>
+            <button type="submit" class="buttonCadastro" id="buttonFinal">
+              <p id="textButton">Entrar na Conta</p>
+            </button>
+
+          </form>
+          <p>Não tem conta? <a href="novousuario.html" class="a2">Crie agora!</a></p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+  <footer>
+    <div class="container-footer">
+      <p>Copyright Point F1 - Trabalho para Growdev</p>
+    </div>
+  </footer>
+
+  <script src="js/login.js"></script>
+</body>
+
+</html>
