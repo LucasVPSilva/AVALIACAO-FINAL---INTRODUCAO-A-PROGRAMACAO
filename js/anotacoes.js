@@ -26,30 +26,21 @@ function cadastrarAnotacoes(eventoSubmit) {
     }
 
     listaAnotacao.unshift(anotacao)
-    console.log(listaAnotacao);
+
 
 
     localStorage.setItem('listaAnotacao', JSON.stringify(listaAnotacao))
     localStorage.setItem('ultimoId', anotacao.id)
-    // anotacoes.push(anotacao)
-    // alert(`pronto`);
-
-    // //JASON.stringfy converte qualquer valor (number, object...) para uma string
-    // console.log(anotacao.dataInf.value)
-    // localStorage.setItem('anotacoes', JSON.stringify(anotacoes))
-
-
 }
 
 
 function proximoId() {
-    alert('testando');
     let ultimoId = Number(localStorage.getItem('ultimoId') ?? '0');
     return ++ultimoId
 }
 
 
-
+console.log(listaAnotacao);
 
 
 
