@@ -1,11 +1,18 @@
 //////// FORMULARIO DE ANOTACOES
 
 
-
 const usuarioAtivo = JSON.parse(localStorage.getItem("usuarioAtivo"));
 const listaAnotacao = JSON.parse(localStorage.getItem('listaAnotacao') ?? '[]')
 
 
+
+
+console.log(listaAnotacao);
+console.log(usuarioAtivo);
+
+usuarioAtivo.listaDeLembretes.forEach((lembrete, indexe) => {
+    console.log(lembrete.dataInf);
+})
 
 
 function cadastrarAnotacoes(eventoSubmit) {
@@ -23,8 +30,10 @@ function cadastrarAnotacoes(eventoSubmit) {
     }
 
     listaAnotacao.push(anotacao);
+    usuarioAtivo.listaDeLembretes.push(anotacao)
 
     localStorage.setItem('listaAnotacao', JSON.stringify(listaAnotacao))
+    localStorage.setItem('usuarioAtivo', JSON.stringify(usuarioAtivo))
 }
 
 
@@ -33,34 +42,35 @@ const anotacoesSalvas = JSON.parse(localStorage.getItem('listaAnotacao') ?? '[]'
 
 const tBody = document.querySelector('#tBody');
 
-for (const anotacaoTabela of anotacoesSalvas) {
+usuarioAtivo.listaDeLembretes.forEach((lembrete, indexe) => {
 
     const tr = document.createElement('tr');
     tBody.appendChild(tr);
 
     const td = document.createElement('td');
     tr.appendChild(td);
-    td.textContent = anotacaoTabela.dataInf;
+    td.textContent = lembrete.dataInf;
+
 
     const td2 = document.createElement('td');
     tr.appendChild(td2);
-    td2.textContent = anotacaoTabela.corrida;
+    td2.textContent = lembrete.corrida;
 
     const td3 = document.createElement('td');
     tr.appendChild(td3);
-    td3.textContent = anotacaoTabela.piloto;
+    td3.textContent = lembrete.piloto;
 
     const td4 = document.createElement('td');
     tr.appendChild(td4);
-    td4.textContent = anotacaoTabela.posicaoChegada;
+    td4.textContent = lembrete.posicaoChegada;
 
     const td5 = document.createElement('td');
     tr.appendChild(td5);
-    td5.textContent = anotacaoTabela.pontuacaoPiloto;
+    td5.textContent = lembrete.pontuacaoPiloto;
 
     const td6 = document.createElement('td');
     tr.appendChild(td6);
-    td6.textContent = anotacaoTabela.observacoesDaCorrida;
+    td6.textContent = lembrete.observacoesDaCorrida;
 
     const td7 = document.createElement('button');
     tr.appendChild(td7);
@@ -74,9 +84,7 @@ for (const anotacaoTabela of anotacoesSalvas) {
     td8.textContent = 'EDITAR'
 
 
-
-
-}
+});
 
 
 
@@ -93,3 +101,6 @@ for (const anotacaoTabela of anotacoesSalvas) {
 //     localStorage.setItem('listaAnotacao', JSON.stringify(listaAnotacao))
 
 // }
+
+
+
