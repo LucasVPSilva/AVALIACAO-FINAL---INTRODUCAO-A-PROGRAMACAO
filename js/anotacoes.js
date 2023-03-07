@@ -1,22 +1,19 @@
-
-
-const listaUsers = JSON.parse(localStorage.getItem('listaUsers'));
+//////// FORMULARIO DE ANOTACOES
 
 
 
-////// FORMULARIO DE ANOTACOES
-
-
+const usuarioAtivo = JSON.parse(localStorage.getItem("usuarioAtivo"));
 const listaAnotacao = JSON.parse(localStorage.getItem('listaAnotacao') ?? '[]')
 
-function cadastrarAnotacoes(eventoSubmit) {
 
+
+
+function cadastrarAnotacoes(eventoSubmit) {
 
 
     const form = document.querySelector("#formAnotacoes");
 
     const anotacao = {
-        id: proximoId(),
         dataInf: form.dataInf.value,
         corrida: form.corrida.value,
         piloto: form.piloto.value,
@@ -25,22 +22,10 @@ function cadastrarAnotacoes(eventoSubmit) {
         observacoesDaCorrida: form.observacoesDaCorrida.value,
     }
 
-    listaAnotacao.unshift(anotacao)
-
-
+    listaAnotacao.push(anotacao);
 
     localStorage.setItem('listaAnotacao', JSON.stringify(listaAnotacao))
-    localStorage.setItem('ultimoId', anotacao.id)
 }
-
-
-function proximoId() {
-    let ultimoId = Number(localStorage.getItem('ultimoId') ?? '0');
-    return ++ultimoId
-}
-
-
-console.log(listaAnotacao);
 
 
 
@@ -81,9 +66,7 @@ for (const anotacaoTabela of anotacoesSalvas) {
     tr.appendChild(td7);
     td7.setAttribute('style', 'text-align:center; padding: 2px; background-color: red; margin: 10px; cursor: pointer; border-radius:5px');
     td7.textContent = 'EXCLUIR'
-    td7.onclick = () => {
-        removerAnotacao(anotacaoTabela.id)
-    }
+
 
     const td8 = document.createElement('button');
     tr.appendChild(td8);
@@ -97,17 +80,16 @@ for (const anotacaoTabela of anotacoesSalvas) {
 
 
 
-function removerAnotacao(idAnotacao) {
+// function removerAnotacao(idAnotacao) {
 
-    const indiceAnotacao = listaAnotacao.findIdex((dev) => dev.id === idAnotacao)
+//     const indiceAnotacao = listaAnotacao.findIdex((dev) => dev.id === idAnotacao)
 
-    if (indiceAnotacao === -1) {
-        alert('Não foi localizado a anotação!')
-        return
-    }
+//     if (indiceAnotacao === -1) {
+//         alert('Não foi localizado a anotação!')
+//         return
+//     }
 
-    listaAnotacao.splice(indiceAnotacao, 1)
-    localStorage.setItem('listaAnotacao', JSON.stringify(listaAnotacao))
+//     listaAnotacao.splice(indiceAnotacao, 1)
+//     localStorage.setItem('listaAnotacao', JSON.stringify(listaAnotacao))
 
-}
-
+// }

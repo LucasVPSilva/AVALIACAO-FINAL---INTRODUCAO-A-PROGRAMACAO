@@ -23,7 +23,7 @@
   </header>
   <main>
     <div class="container_main">
-      <form action="" class="formularioCadastro" id="formularioCadastro" onsubmit="cadastrarUsuario(event)">
+      <form action="" class="formularioCadastro" id="formularioCadastro" onsubmit="signup(event)">
         <fieldset>
           <legend><strong>Cadastro Novo Usuário:</strong></legend>
           <br>
@@ -34,8 +34,8 @@
           <label for="dataNascimento">Data de Nascimento:</label>
           <input type="date" name="dataNascimento" id="dataNascimento">
           <br><br>
-          <label for="emailCompleto">Digite seu e-mail para <i>login</i>:</label>
-          <input type="email" name="emailCompleto" id="emailCompleto" placeholder="Ex.: email@email.com" required>
+          <label for="emailLogin">Digite seu e-mail para <i>login</i>:</label>
+          <input type="email" name="emailLogin" id="emailLogin" placeholder="Ex.: email@email.com" required>
           <br><br>
           <label for="senhaLogin">Digite sua senha para <i>login</i>:</label>
           <input type="password" name="senhaLogin" id="senhaLogin" required>
